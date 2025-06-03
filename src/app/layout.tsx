@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { ToastProvider } from "./components/ToastContext";
 const inter = Poppins({
   subsets: ["latin"],
   weight: "400"
@@ -23,12 +24,14 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Header />
-          <div className="mt-28">{children}</div>
+          <ToastProvider>
+            <div className="mt-28">{children}</div>
+          </ToastProvider>
           <Footer />
         </body>
 
       </html>
-     
+
     </>
 
   );
