@@ -30,11 +30,11 @@ const NavMenu = ({ isDrawerOpen, setIsDrawerOpen }: { isDrawerOpen: boolean, set
             {strings.aboutCaps}
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href={"/blog"} onClick={() => setIsDrawerOpen(false)} className="text-secondary hover:text-primary hover:pl-3 md:hover:text-black md:hover:pl-0 transition-all duration-300 text-6xl md:text-black md:text-xl sm:text-lg md:text-base lg:text-xl xl:text-xl">
             {strings.blogCaps}
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
